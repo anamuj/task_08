@@ -10,11 +10,13 @@
         <div class="card my-card">
           <div class="card-body">
             <h5 class="card-title">{{restaurant.name}}</h5>
+            <img src="{{restaurant.logo.url}}" alt="restaurant logo">
             <p class="card-text">{{restaurant.description|truncatechars:25}}</p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item text-center">
                 <a href="{% url 'restaurant-detail' restaurant.id %}" class="btn btn-outline-dark">View</a>
+                
             </li>
           </ul>
         </div>
@@ -22,4 +24,3 @@
     {% endfor %}
 </div>
 {% endblock content %}
-
